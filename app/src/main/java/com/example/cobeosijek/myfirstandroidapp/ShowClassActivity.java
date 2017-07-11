@@ -1,5 +1,6 @@
 package com.example.cobeosijek.myfirstandroidapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -32,8 +33,10 @@ public class ShowClassActivity extends AppCompatActivity {
     }
 
     private void getExtras() {
-        passedEmail = getIntent().getStringExtra(Constants.EMAIL);
-        passedGender = getIntent().getStringExtra(Constants.GENDER);
+        Intent intent = getIntent();
+
+        passedEmail = intent.getStringExtra(Constants.EMAIL);
+        passedGender = intent.getStringExtra(Constants.GENDER);
     }
 
     private void setData() {
