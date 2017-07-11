@@ -9,7 +9,7 @@ import android.widget.TextView;
  * Created by cobeosijek on 11/07/2017.
  */
 
-public class ShowClass extends AppCompatActivity {
+public class ShowClassActivity extends AppCompatActivity {
 
     private TextView email;
     private TextView gender;

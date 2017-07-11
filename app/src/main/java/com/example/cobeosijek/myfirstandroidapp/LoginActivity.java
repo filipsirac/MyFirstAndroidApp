@@ -17,7 +17,6 @@ import android.widget.RadioGroup;
 
 public class LoginActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener, View.OnClickListener {
 
-
     private EditText email;
     private Button registration;
 
@@ -59,7 +58,7 @@ public class LoginActivity extends AppCompatActivity implements RadioGroup.OnChe
     @Override
     public void onClick(View view) {
         getEmail();
-        Intent intent = new Intent(getApplicationContext(), ShowClass.class);
+        Intent intent = new Intent(getApplicationContext(), ShowClassActivity.class);
         intent.putExtra(Constants.EMAIL, emailText);
         intent.putExtra(Constants.GENDER, genderText);
         startActivity(intent);
