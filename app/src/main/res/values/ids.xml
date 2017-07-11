@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Register -->
+    <item name="register" type="id" />
+    <item name="first_name" type="id"/>
+    <item name="last_name" type="id"/>
+    <item name="email" type="id"/>
+    <item name="password" type="id"/>
+    <item name="confirm_password" type="id"/>
+    <item name="male" type="id"/>
+    <item name="female" type="id"/>
+    <item name="send_notification" type="id"/>
+    <item name="registration" type="id"/>
+    <item name="gender_group" type="id"/>
+
+    <item name="gender" type="id" />
+
+</resources>
