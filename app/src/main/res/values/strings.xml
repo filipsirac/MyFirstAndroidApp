@@ -14,5 +14,10 @@
     <string name="send_notification">Send Notification</string>
     <string name="registration">Registration</string>
     <string name="registered">Registered</string>
-
+    <string name="login">Login</string>
+    <string name="email_password">Enter your email and password:</string>
+    <string name="email_validation">Incorrect email!</string>
+    <string name="password_validation">To short password!</string>
+    <string name="home">Home</string>
+    <string name="age_format">Age: %d</string>
 </resources>

@@ -1,10 +1,13 @@
-package com.example.cobeosijek.myfirstandroidapp;
+package com.example.cobeosijek.myfirstandroidapp.training;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
+
+import com.example.cobeosijek.myfirstandroidapp.common.Constants;
+import com.example.cobeosijek.myfirstandroidapp.R;
 
 /**
  * Created by cobeosijek on 11/07/2017.

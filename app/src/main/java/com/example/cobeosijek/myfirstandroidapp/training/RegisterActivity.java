@@ -1,4 +1,4 @@
-package com.example.cobeosijek.myfirstandroidapp;
+package com.example.cobeosijek.myfirstandroidapp.training;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,11 +11,14 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import com.example.cobeosijek.myfirstandroidapp.common.Constants;
+import com.example.cobeosijek.myfirstandroidapp.R;
+
 /**
  * Created by cobeosijek on 11/07/2017.
  */
 
-public class LoginActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener, View.OnClickListener {
+public class RegisterActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener, View.OnClickListener {
 
     private EditText email;
     private Button registration;
@@ -27,7 +30,7 @@ public class LoginActivity extends AppCompatActivity implements RadioGroup.OnChe
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_register);
 
         initUi();
         setListeners();
