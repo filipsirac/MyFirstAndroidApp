@@ -21,5 +21,11 @@
     <item name="car_image" type="id" />
     <item name="name" type="id" />
     <item name="age" type="id" />
+    <item name="icon_person" type="id" />
+    <item name="activity_container" type="id" />
+    <item name="description" type="id" />
+    <item name="detail_fragment" type="id" />
+    <item name="fragment_container" type="id" />
+    <item name="car_layout" type="id" />
 
 </resources>

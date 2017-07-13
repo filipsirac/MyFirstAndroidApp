@@ -37,7 +37,8 @@
         android:drawablePadding="10dp"
         android:drawableStart="@drawable/icon_email"
         android:maxLines="1"
-        android:singleLine="true" />
+        android:singleLine="true"
+        android:text="filip.sirac@gmail.com" />
 
     <EditText
         android:id="@id/password"
@@ -49,7 +50,8 @@
         android:drawableStart="@drawable/icon_https"
         android:inputType="textPassword"
         android:maxLines="1"
-        android:singleLine="true" />
+        android:singleLine="true"
+        android:text="nekiPassword" />
 
     <Button
         android:id="@id/login"

@@ -61,7 +61,7 @@ public class RegisterActivity extends AppCompatActivity implements RadioGroup.On
     @Override
     public void onClick(View view) {
         getEmail();
-        Intent intent = new Intent(getApplicationContext(), ShowClassActivity.class);
+        Intent intent = new Intent(getApplicationContext(), ShowDataActivity.class);
         intent.putExtra(Constants.EMAIL, emailText);
         intent.putExtra(Constants.GENDER, genderText);
         startActivity(intent);

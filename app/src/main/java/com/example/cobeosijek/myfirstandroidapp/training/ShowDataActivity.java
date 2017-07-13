@@ -13,7 +13,7 @@ import com.example.cobeosijek.myfirstandroidapp.R;
  * Created by cobeosijek on 11/07/2017.
  */
 
-public class ShowClassActivity extends AppCompatActivity {
+public class ShowDataActivity extends AppCompatActivity {
 
     private TextView email;
     private TextView gender;
@@ -23,7 +23,7 @@ public class ShowClassActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.show_activity);
+        setContentView(R.layout.activity_show_data);
 
         initUi();
         getExtras();

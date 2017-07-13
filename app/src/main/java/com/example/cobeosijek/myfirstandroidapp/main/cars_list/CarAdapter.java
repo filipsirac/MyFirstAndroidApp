@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.cobeosijek.myfirstandroidapp.R;
@@ -43,7 +44,7 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.MyViewHolder> {
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         context = parent.getContext();
-        View itemView = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_item_car, parent, false);
+        View itemView = LayoutInflater.from(context).inflate(R.layout.list_item_car, parent, false);
         return new MyViewHolder(itemView);
     }
 
@@ -57,19 +58,28 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.MyViewHolder> {
         if (car.getImages() != null && !car.getImages().isEmpty()) {
             Picasso.with(context).load(car.getImages().get(0)).into(holder.carImage);
         }
+
+        holder.carLayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //ovdje ce se otvarati DetailsActivity
+            }
+        });
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
+    public static class MyViewHolder extends RecyclerView.ViewHolder {
 
         private ImageView carImage;
         private TextView name;
         private TextView age;
+        private RelativeLayout carLayout;
 
         public MyViewHolder(View view) {
             super(view);
             carImage = view.findViewById(R.id.car_image);
             name = view.findViewById(R.id.name);
             age = view.findViewById(R.id.age);
+            carLayout = view.findViewById(R.id.car_layout);
         }
     }
 }
