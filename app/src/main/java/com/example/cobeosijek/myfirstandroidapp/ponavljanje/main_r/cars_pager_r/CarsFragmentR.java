@@ -1,4 +1,4 @@
-package com.example.cobeosijek.myfirstandroidapp.main;
+package com.example.cobeosijek.myfirstandroidapp.ponavljanje.main_r.cars_pager_r;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -13,22 +13,23 @@ import android.view.ViewGroup;
 import com.example.cobeosijek.myfirstandroidapp.R;
 import com.example.cobeosijek.myfirstandroidapp.common.CarUtils;
 import com.example.cobeosijek.myfirstandroidapp.common.Constants;
+import com.example.cobeosijek.myfirstandroidapp.main.CarsFragment;
 import com.example.cobeosijek.myfirstandroidapp.main.cars_list.CarAdapter;
 import com.example.cobeosijek.myfirstandroidapp.models.CarModel;
 
 import java.util.List;
 
 /**
- * Created by cobeosijek on 13/07/2017.
+ * Created by cobeosijek on 17/07/2017.
  */
 
-public class CarsFragment extends Fragment {
-
+public class CarsFragmentR extends Fragment {
     private CarAdapter carAdapter;
     private RecyclerView recyclerView;
 
     public static CarsFragment newInstance(String carsType) {
         CarsFragment carsFragment = new CarsFragment();
+
         Bundle extras = new Bundle();
         extras.putString(Constants.CAR_TYPE, carsType);
         carsFragment.setArguments(extras);
@@ -37,7 +38,7 @@ public class CarsFragment extends Fragment {
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_cars, container, false);
     }
 
@@ -56,9 +57,9 @@ public class CarsFragment extends Fragment {
 
     private void setAdapter() {
         carAdapter = new CarAdapter();
-        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity())); // uvijek mora grid(context, broj stupaca) i linear(context)
-        recyclerView.setItemAnimator(new DefaultItemAnimator()); //moze i ne mora
-        recyclerView.setAdapter(carAdapter); //uvijek adapter
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        recyclerView.setAdapter(carAdapter);
     }
 
     private void getExtras() {
@@ -71,9 +72,7 @@ public class CarsFragment extends Fragment {
             } else if (carType.equals(Constants.FAVOURITE_CARS)) {
                 List<CarModel> favouriteCars = CarUtils.getFavouriteCars();
                 carAdapter.setItems(favouriteCars);
-
             }
         }
     }
-
 }

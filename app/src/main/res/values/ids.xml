@@ -27,5 +27,14 @@
     <item name="detail_fragment" type="id" />
     <item name="fragment_container" type="id" />
     <item name="car_layout" type="id" />
+    <item name="view_pager" type="id" />
+    <item name="tab_layout" type="id" />
+    <item name="car_details" type="id" />
+    <item name="passed_image" type="id" />
+    <item name="passed_name" type="id" />
+    <item name="speed" type="id" />
+    <item name="passed_age" type="id" />
+    <item name="passed_speed" type="id" />
+    <item name="passed_registration" type="id" />
 
 </resources>

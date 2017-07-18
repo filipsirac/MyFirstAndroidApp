@@ -23,4 +23,10 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="all_cars">ALL</string>
+    <string name="favourite_cars">FAVORITE</string>
+    <string name="details">Car details</string>
+    <string name="speed_format">Speed: %dkm/h</string>
+    <string name="registration_format">Registration: %s</string>
+
 </resources>

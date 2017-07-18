@@ -1,4 +1,4 @@
-package com.example.cobeosijek.myfirstandroidapp.main;
+package com.example.cobeosijek.myfirstandroidapp.ponavljanje.main_r.cars_pager_r;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,13 +12,14 @@ import android.widget.TextView;
 
 import com.example.cobeosijek.myfirstandroidapp.R;
 import com.example.cobeosijek.myfirstandroidapp.common.Constants;
+import com.example.cobeosijek.myfirstandroidapp.main.CarsFragment;
 import com.example.cobeosijek.myfirstandroidapp.main.cars_pager.CarsPagerAdapter;
 
 /**
- * Created by cobeosijek on 12/07/2017.
+ * Created by cobeosijek on 17/07/2017.
  */
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivityR extends AppCompatActivity implements View.OnClickListener {
 
     private TextView email;
     private ImageView iconBack;
@@ -47,15 +48,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         passedEmail = intent.getStringExtra(Constants.EMAIL);
     }
 
+    private void setListener() {
+        iconBack.setOnClickListener(this);
+    }
+
     private void initUi() {
         email = (TextView) findViewById(R.id.email);
         iconBack = (ImageView) findViewById(R.id.icon_back);
         tabLayout = (TabLayout) findViewById(R.id.tab_layout);
         viewPager = (ViewPager) findViewById(R.id.view_pager);
-    }
-
-    private void setListener() {
-        iconBack.setOnClickListener(this);
     }
 
     private void setViewPager() {

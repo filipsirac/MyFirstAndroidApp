@@ -1,6 +1,6 @@
 package com.example.cobeosijek.myfirstandroidapp.common;
 
-import com.example.cobeosijek.myfirstandroidapp.main.cars_list.CarModel;
+import com.example.cobeosijek.myfirstandroidapp.models.CarModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,9 +24,9 @@ public class CarUtils {
         porscheImages.add("http://files2.porsche.com/filestore/image/multimedia/none/991-2nd-tus-exc-detail-highlight-exterior-xle/zoom/d9b69840-3a1c-11e7-9f74-0019999cd470;s3/porsche-zoom.jpg");
         porscheImages.add("http://hanabi.autoweek.com/sites/default/files/styles/gen-1200-675/public/18953363_10155726606922668_.jpg?itok=UoNrhtKF");
 
-        cars.add(new CarModel(audiImages, "Audi A8", 2018));
-        cars.add(new CarModel(bmwImages, "Bmw 750i", 2017));
-        cars.add(new CarModel(porscheImages, "Porsche 911 turbo S", 2017));
+        cars.add(new CarModel(audiImages, "Audi A8", 2018, 330, "OS-675-AB"));
+        cars.add(new CarModel(bmwImages, "Bmw 750i", 2017, 280, "OS-111-CC"));
+        cars.add(new CarModel(porscheImages, "Porsche 911 turbo S", 2017, 350, "ZG-222-FF"));
         return cars;
     }
 
@@ -35,7 +35,7 @@ public class CarUtils {
         List<String> bmwImages = new ArrayList<>();
         bmwImages.add("https://media.ed.edmunds-media.com/bmw/7-series/2016/oem/2016_bmw_7-series_sedan_750i-xdrive_fq_oem_4_1280.jpg");
         bmwImages.add("http://st.motortrend.com/uploads/sites/5/2015/11/2016-BMW-750i-xDrive-cockpit.jpg");
-        cars.add(new CarModel(bmwImages, "Bmw 750i", 2017));
+        cars.add(new CarModel(bmwImages, "Bmw 750i", 2017, 280, "OS-111-CC"));
         return cars;
     }
 }

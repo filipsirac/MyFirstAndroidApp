@@ -1,21 +1,21 @@
-package com.example.cobeosijek.myfirstandroidapp.main.cars_list;
+package com.example.cobeosijek.myfirstandroidapp.ponavljanje.main_r.car_list_r;
 
 import java.util.List;
 
 /**
- * Created by cobeosijek on 12/07/2017.
+ * Created by cobeosijek on 17/07/2017.
  */
 
-public class CarModel {
+public class CarModelR {
 
     private List<String> images;
     private String name;
-    private int age;
+    private int ages;
 
-    public CarModel(List<String> images, String name, int age) {
+    public CarModelR(List<String> images, String name, int ages) {
         this.images = images;
         this.name = name;
-        this.age = age;
+        this.ages = ages;
     }
 
     public List<String> getImages() {
@@ -34,11 +34,12 @@ public class CarModel {
         this.name = name;
     }
 
-    public int getAge() {
-        return age;
+    public int getAges() {
+        return ages;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setAges(int ages) {
+        this.ages = ages;
     }
+
 }

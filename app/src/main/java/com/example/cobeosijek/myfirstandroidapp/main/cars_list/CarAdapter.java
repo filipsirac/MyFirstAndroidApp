@@ -1,6 +1,8 @@
 package com.example.cobeosijek.myfirstandroidapp.main.cars_list;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +12,9 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.cobeosijek.myfirstandroidapp.R;
+import com.example.cobeosijek.myfirstandroidapp.common.Constants;
+import com.example.cobeosijek.myfirstandroidapp.details.CarDetailsActivity;
+import com.example.cobeosijek.myfirstandroidapp.models.CarModel;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -49,8 +54,8 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.MyViewHolder> {
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder, int position) {
-        CarModel car = carList.get(position);
+    public void onBindViewHolder(MyViewHolder holder, final int position) {
+        final CarModel car = carList.get(position);
 
         holder.name.setText(car.getName());
         holder.age.setText(String.format(Locale.getDefault(), context.getString(R.string.age_format), car.getAge()));
@@ -62,7 +67,9 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.MyViewHolder> {
         holder.carLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //ovdje ce se otvarati DetailsActivity
+                Intent intent = new Intent(context, CarDetailsActivity.class);
+                intent.putExtra(Constants.CAR_MODEL, car);
+                context.startActivity(intent);
             }
         });
     }
