@@ -28,5 +28,12 @@
     <string name="details">Car details</string>
     <string name="speed_format">Speed: %dkm/h</string>
     <string name="registration_format">Registration: %s</string>
+    <string name="set_title">Alert</string>
+    <string name="set_message">This is alert message</string>
+    <string name="no">NO</string>
+    <string name="yes">YES</string>
+    <string name="clicked_no">Clicked no!</string>
+    <string name="clicked_yes">Clicked yes!</string>
+    <string name="snackbar_message">This is TextView</string>
 
 </resources>

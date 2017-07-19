@@ -34,6 +34,16 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         setListener();
     }
 
+    private void initUi() {
+        email = (EditText) findViewById(R.id.email);
+        password = (EditText) findViewById(R.id.password);
+        login = (Button) findViewById(R.id.login);
+    }
+
+    private void setListener() {
+        login.setOnClickListener(this);
+    }
+
     private boolean isFormValid() {
         boolean isEmailValid;
         boolean isPasswordValid;
@@ -56,21 +66,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         return isEmailValid && isPasswordValid;
     }
 
-    private void initUi() {
-        email = (EditText) findViewById(R.id.email);
-        password = (EditText) findViewById(R.id.password);
-        login = (Button) findViewById(R.id.login);
-    }
-
-    private void setListener() {
-        login.setOnClickListener(this);
-    }
-
     private void getData() {
         emailText = email.getText().toString();
         passwordText = password.getText().toString();
     }
-
 
     @Override
     public void onClick(View view) {
@@ -80,6 +79,5 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             intent.putExtra(Constants.EMAIL, emailText);
             startActivity(intent);
         }
-
     }
 }

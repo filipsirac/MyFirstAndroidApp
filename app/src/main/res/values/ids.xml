@@ -36,5 +36,5 @@
     <item name="passed_age" type="id" />
     <item name="passed_speed" type="id" />
     <item name="passed_registration" type="id" />
-
+    <item name="root_layout" type="id" />
 </resources>

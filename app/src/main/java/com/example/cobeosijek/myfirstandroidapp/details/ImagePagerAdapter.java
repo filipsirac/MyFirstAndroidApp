@@ -1,4 +1,4 @@
-package com.example.cobeosijek.myfirstandroidapp.main.cars_pager;
+package com.example.cobeosijek.myfirstandroidapp.details;
 
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
@@ -50,6 +50,7 @@ public class ImagePagerAdapter extends PagerAdapter {
         View itemView = mLayoutInflater.inflate(R.layout.image_item, container, false);
         ImageView carImage = itemView.findViewById(R.id.car_image);
         Picasso.with(mContext).load(images.get(position)).into(carImage);
+        carImage.setScaleType(ImageView.ScaleType.CENTER_CROP);
         container.addView(itemView);
         return itemView;
     }

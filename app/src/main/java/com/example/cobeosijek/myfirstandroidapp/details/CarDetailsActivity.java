@@ -11,7 +11,6 @@ import android.widget.TextView;
 
 import com.example.cobeosijek.myfirstandroidapp.R;
 import com.example.cobeosijek.myfirstandroidapp.common.Constants;
-import com.example.cobeosijek.myfirstandroidapp.main.cars_pager.ImagePagerAdapter;
 import com.example.cobeosijek.myfirstandroidapp.models.CarModel;
 
 import java.util.List;
@@ -40,10 +39,6 @@ public class CarDetailsActivity extends AppCompatActivity implements View.OnClic
         getExtras();
     }
 
-    private void setListeners() {
-        iconBack.setOnClickListener(this);
-    }
-
     private void initUi() {
         viewPager = (ViewPager) findViewById(R.id.view_pager);
         age = (TextView) findViewById(R.id.passed_age);
@@ -51,6 +46,10 @@ public class CarDetailsActivity extends AppCompatActivity implements View.OnClic
         speed = (TextView) findViewById(R.id.passed_speed);
         registration = (TextView) findViewById(R.id.passed_registration);
         iconBack = (ImageView) findViewById(R.id.icon_back);
+    }
+
+    private void setListeners() {
+        iconBack.setOnClickListener(this);
     }
 
     private void getExtras() {

@@ -65,12 +65,13 @@ public class CarsFragment extends Fragment {
         Bundle bundle = getArguments();
         String carType = bundle.getString(Constants.CAR_TYPE);
         if (carType != null) {
+            List<CarModel> cars;
             if (carType.equals(Constants.ALL_CARS)) {
-                List<CarModel> allCars = CarUtils.getAllCars();
-                carAdapter.setItems(allCars);
+                cars = CarUtils.getAllCars();
+                carAdapter.setItems(cars);
             } else if (carType.equals(Constants.FAVOURITE_CARS)) {
-                List<CarModel> favouriteCars = CarUtils.getFavouriteCars();
-                carAdapter.setItems(favouriteCars);
+                cars = CarUtils.getFavouriteCars();
+                carAdapter.setItems(cars);
 
             }
         }

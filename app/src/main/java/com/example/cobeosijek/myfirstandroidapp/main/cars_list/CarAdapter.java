@@ -1,8 +1,10 @@
 package com.example.cobeosijek.myfirstandroidapp.main.cars_list;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +16,7 @@ import android.widget.TextView;
 import com.example.cobeosijek.myfirstandroidapp.R;
 import com.example.cobeosijek.myfirstandroidapp.common.Constants;
 import com.example.cobeosijek.myfirstandroidapp.details.CarDetailsActivity;
+import com.example.cobeosijek.myfirstandroidapp.main.MainActivity;
 import com.example.cobeosijek.myfirstandroidapp.models.CarModel;
 import com.squareup.picasso.Picasso;
 
@@ -72,6 +75,14 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.MyViewHolder> {
                 context.startActivity(intent);
             }
         });
+
+        holder.carLayout.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View view) {
+
+                return false;
+            }
+        });
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
@@ -89,4 +100,5 @@ public class CarAdapter extends RecyclerView.Adapter<CarAdapter.MyViewHolder> {
             carLayout = view.findViewById(R.id.car_layout);
         }
     }
+
 }
